@@ -30,6 +30,20 @@ export function VideoBlock({ video }: { video: BrandVideo }) {
       );
     }
   }
+  // demo placeholder (seed data, no real asset yet)
+  if (video.url === "#") {
+    return (
+      <div className="flex aspect-video flex-col items-center justify-center gap-3 rounded-xl border border-white/10 bg-shelf text-center">
+        <span className="hum flex h-14 w-14 items-center justify-center rounded-full border border-white/25 text-xl">
+          ▶
+        </span>
+        <span className="px-6 text-sm text-bone">{video.title}</span>
+        <span className="font-[family-name:var(--font-mono)] text-xs text-fog">
+          founder video — premieres at launch
+        </span>
+      </div>
+    );
+  }
   // tiktok / instagram / upload fallback: link-out tile
   const label =
     video.source === "tiktok"

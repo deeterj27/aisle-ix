@@ -48,7 +48,7 @@ export const brands: Brand[] = [
       quote: "Every can is for somebody who's still up. I know exactly who I make this for.",
     },
     videos: [
-      { id: "mm-1", title: "Why I started Moonmilk", source: "youtube", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", featured: true },
+      { id: "mm-1", title: "Why I started Moonmilk", source: "upload", url: "#", featured: true },
       { id: "mm-2", title: "Night shift stories", source: "tiktok", url: "https://www.tiktok.com/@moonmilk" },
     ],
     products: [
@@ -77,7 +77,7 @@ export const brands: Brand[] = [
       quote: "Too much for the shelf was the whole point. So we found a different shelf.",
     },
     videos: [
-      { id: "st-1", title: "19 years at the counter", source: "youtube", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", featured: true },
+      { id: "st-1", title: "19 years at the counter", source: "upload", url: "#", featured: true },
       { id: "st-2", title: "Flavor lab: gunpowder batch 12", source: "instagram", url: "https://instagram.com/staticsnacks" },
     ],
     products: [
@@ -106,7 +106,7 @@ export const brands: Brand[] = [
       quote: "Fermentation is just patience you can eat.",
     },
     videos: [
-      { id: "bv-1", title: "The crock that started it", source: "youtube", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", featured: true },
+      { id: "bv-1", title: "The crock that started it", source: "upload", url: "#", featured: true },
     ],
     products: [
       { id: "bv-p1", name: "Hot Honey Dills", price: 14, description: "The market sell-out. Sweet heat, real crunch.", badge: "best seller" },
@@ -135,7 +135,7 @@ export const brands: Brand[] = [
       quote: "Luxury isn't the price tag. It's the texture.",
     },
     videos: [
-      { id: "vh-1", title: "From Michelin to the bodega fridge", source: "youtube", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", featured: true },
+      { id: "vh-1", title: "From Michelin to the bodega fridge", source: "upload", url: "#", featured: true },
       { id: "vh-2", title: "Midnight tempering", source: "tiktok", url: "https://tiktok.com/@velvethour" },
     ],
     products: [
@@ -163,7 +163,7 @@ export const brands: Brand[] = [
       quote: "You can freeze a dumpling. You can't fake a fold.",
     },
     videos: [
-      { id: "gl-1", title: "The fold", source: "youtube", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", featured: true },
+      { id: "gl-1", title: "The fold", source: "upload", url: "#", featured: true },
     ],
     products: [
       { id: "gl-p1", name: "Pork & Chive — 24 count", price: 26, description: "The original. Batch-numbered.", badge: "best seller" },
@@ -191,7 +191,7 @@ export const brands: Brand[] = [
       quote: "The formula isn't secret. It's the whole product. That's the point.",
     },
     videos: [
-      { id: "hm-1", title: "What the back of an ambulance teaches you", source: "youtube", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", featured: true },
+      { id: "hm-1", title: "What the back of an ambulance teaches you", source: "upload", url: "#", featured: true },
     ],
     products: [
       { id: "hm-p1", name: "HUM Citrus — 30 packets", price: 32, description: "The clinical ratio, lemon-lime.", badge: "best seller" },
@@ -218,7 +218,7 @@ export const brands: Brand[] = [
       quote: "Daytime coffee culture had enough brands. Ours clock in at 11pm.",
     },
     videos: [
-      { id: "no-1", title: "Eight years at the window", source: "youtube", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", featured: true },
+      { id: "no-1", title: "Eight years at the window", source: "upload", url: "#", featured: true },
     ],
     products: [
       { id: "no-p1", name: "Second Shift Cold Brew — 4 pack", price: 24, description: "The keg recipe, canned.", badge: "best seller" },
@@ -246,7 +246,7 @@ export const brands: Brand[] = [
       quote: "41 blends. I still have the spreadsheets. Nobody gets to call that luck.",
     },
     videos: [
-      { id: "cn-1", title: "Blend #41", source: "youtube", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", featured: true },
+      { id: "cn-1", title: "Blend #41", source: "upload", url: "#", featured: true },
       { id: "cn-2", title: "Midnight drop culture", source: "instagram", url: "https://instagram.com/cloudninemochi" },
     ],
     products: [
@@ -275,7 +275,7 @@ export const brands: Brand[] = [
       quote: "Scale is easy. Standards are hard. We're doing standards first.",
     },
     videos: [
-      { id: "fe-1", title: "The estate sale die", source: "youtube", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", featured: true },
+      { id: "fe-1", title: "The estate sale die", source: "upload", url: "#", featured: true },
     ],
     products: [
       { id: "fe-p1", name: "Rigatoni — 3 boxes", price: 27, description: "The flagship cut. Rough, thick, sauce-hungry.", badge: "best seller" },

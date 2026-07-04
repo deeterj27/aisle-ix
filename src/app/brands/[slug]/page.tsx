@@ -158,7 +158,7 @@ export default async function BrandPage({
                     ${p.price}
                   </p>
                   <button
-                    className={`mt-2 rounded-full px-4 py-1.5 text-xs font-semibold transition-transform hover:scale-[1.04] ${legacy ? "bg-black/80 text-white" : "bg-bone text-night"}`}
+                    className={`mt-2 whitespace-nowrap rounded-full px-4 py-1.5 text-xs font-semibold transition-transform hover:scale-[1.04] ${legacy ? "bg-black/80 text-white" : "bg-bone text-night"}`}
                     title="Checkout connects to the brand's Shopify in Phase 2"
                   >
                     add to cart
