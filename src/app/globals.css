@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* ============================================================
+   AISLE IX — night-store design system
+   The store is dark; the products glow.
+   ============================================================ */
+
+@theme {
+  /* base — the dark store */
+  --color-night: #07070b;
+  --color-night-soft: #0d0d14;
+  --color-shelf: #14141d;
+  --color-shelf-edge: #1f1f2c;
+  --color-fog: #9b9bb0;
+  --color-bone: #f2f0ea;
+
+  /* the daytime world (legacy contrast) */
+  --color-daylight: #e8e4da;
+  --color-daylight-ink: #55524a;
+
+  /* neon range */
+  --color-acid: #aaff00;
+  --color-neon-pink: #ff3ec8;
+  --color-neon-cyan: #00f0ff;
+  --color-neon-violet: #a26bff;
+  --color-butter: #ffe94a;
+  --color-tangerine: #ff7a1a;
+
+  --font-display: var(--font-display), "Arial Black", sans-serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+  --font-mono: var(--font-mono), monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-night);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- neon utilities ---------- */
+
+.neon-text-acid { color: var(--color-acid); text-shadow: 0 0 6px rgb(170 255 0 / 0.55), 0 0 24px rgb(170 255 0 / 0.35), 0 0 64px rgb(170 255 0 / 0.2); }
+.neon-text-pink { color: var(--color-neon-pink); text-shadow: 0 0 6px rgb(255 62 200 / 0.55), 0 0 24px rgb(255 62 200 / 0.35), 0 0 64px rgb(255 62 200 / 0.2); }
+.neon-text-cyan { color: var(--color-neon-cyan); text-shadow: 0 0 6px rgb(0 240 255 / 0.55), 0 0 24px rgb(0 240 255 / 0.35), 0 0 64px rgb(0 240 255 / 0.2); }
+.neon-text-violet { color: var(--color-neon-violet); text-shadow: 0 0 6px rgb(162 107 255 / 0.55), 0 0 24px rgb(162 107 255 / 0.35), 0 0 64px rgb(162 107 255 / 0.2); }
+.neon-text-butter { color: var(--color-butter); text-shadow: 0 0 6px rgb(255 233 74 / 0.55), 0 0 24px rgb(255 233 74 / 0.35), 0 0 64px rgb(255 233 74 / 0.2); }
+.neon-text-tangerine { color: var(--color-tangerine); text-shadow: 0 0 6px rgb(255 122 26 / 0.55), 0 0 24px rgb(255 122 26 / 0.35), 0 0 64px rgb(255 122 26 / 0.2); }
+
+.neon-box-acid { border-color: rgb(170 255 0 / 0.6); box-shadow: 0 0 12px rgb(170 255 0 / 0.25), inset 0 0 18px rgb(170 255 0 / 0.06); }
+.neon-box-pink { border-color: rgb(255 62 200 / 0.6); box-shadow: 0 0 12px rgb(255 62 200 / 0.25), inset 0 0 18px rgb(255 62 200 / 0.06); }
+.neon-box-cyan { border-color: rgb(0 240 255 / 0.6); box-shadow: 0 0 12px rgb(0 240 255 / 0.25), inset 0 0 18px rgb(0 240 255 / 0.06); }
+.neon-box-violet { border-color: rgb(162 107 255 / 0.6); box-shadow: 0 0 12px rgb(162 107 255 / 0.25), inset 0 0 18px rgb(162 107 255 / 0.06); }
+.neon-box-butter { border-color: rgb(255 233 74 / 0.6); box-shadow: 0 0 12px rgb(255 233 74 / 0.25), inset 0 0 18px rgb(255 233 74 / 0.06); }
+.neon-box-tangerine { border-color: rgb(255 122 26 / 0.6); box-shadow: 0 0 12px rgb(255 122 26 / 0.25), inset 0 0 18px rgb(255 122 26 / 0.06); }
+
+/* ---------- fluorescent flicker (used sparingly) ---------- */
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.6; }
+  94% { opacity: 1; }
+  96% { opacity: 0.8; }
+  97% { opacity: 1; }
+}
+
+.flicker { animation: flicker 7s infinite; }
+.flicker-slow { animation: flicker 11s infinite; }
+
+@keyframes hum-pulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+.hum { animation: hum-pulse 4s ease-in-out infinite; }
+
+/* ---------- shelf card hover lift ---------- */
+
+.shelf-card {
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+.shelf-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ---------- store floor grid (perspective floor) ---------- */
+
+.store-floor {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* ---------- daylight section (the legacy world) ---------- */
+
+.daylight {
+  background: var(--color-daylight);
+  color: var(--color-daylight-ink);
+  color-scheme: light;
+}
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .flicker, .flicker-slow, .hum { animation: none; }
+  .shelf-card, .shelf-card:hover { transition: none; transform: none; }
+  html { scroll-behavior: auto; }
+}
